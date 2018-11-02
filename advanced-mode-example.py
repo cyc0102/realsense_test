@@ -24,7 +24,9 @@ def find_device_that_supports_advanced_mode() :
     raise Exception("No device that supports advanced mode was found")
 
 try:
+
     dev = find_device_that_supports_advanced_mode()
+    print("dev=",dev)
     advnc_mode = rs.rs400_advanced_mode(dev)
     print("Advanced mode is", "enabled" if advnc_mode.is_enabled() else "disabled")
 
